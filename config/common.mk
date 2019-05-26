@@ -143,7 +143,8 @@ PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt \
-    Launcher3Dark
+    Launcher3Dark \
+    Lawnchair
 
 # AICP packages
 PRODUCT_PACKAGES += \
@@ -234,3 +235,8 @@ endif
 
 
 EXTENDED_POST_PROCESS_PROPS := vendor/aicp/tools/aicp_process_props.py
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/aicp/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/aicp/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
